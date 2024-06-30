@@ -38,13 +38,20 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
 });
 
 document.getElementById('selectFolderBtn').addEventListener('click', async () => {
-  // Request access to the file system
-  const directoryHandle = await window.showDirectoryPicker();
-  const tree = [];
-  await readDirectory(directoryHandle, '', tree);
-  const treeHtml = generateLocalTreeHtml(tree);
-  document.getElementById('treeOutput').textContent = treeHtml;
-  document.getElementById('copyBtn').style.display = 'block'; // Показываем кнопку после генерации дерева
+  try {
+    console.log('Requesting directory access...');
+    const directoryHandle = await window.showDirectoryPicker();
+    console.log('Directory selected:', directoryHandle);
+
+    const tree = [];
+    await readDirectory(directoryHandle, '', tree);
+    const treeHtml = generateLocalTreeHtml(tree);
+    document.getElementById('treeOutput').textContent = treeHtml;
+    document.getElementById('copyBtn').style.display = 'block'; // Показываем кнопку после генерации дерева
+  } catch (error) {
+    console.error('Error selecting directory:', error);
+    alert('Error selecting directory: ' + error.message);
+  }
 });
 
 document.getElementById('copyBtn').addEventListener('click', () => {
