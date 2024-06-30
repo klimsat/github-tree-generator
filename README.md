@@ -1,5 +1,5 @@
 <h2>Github Tree Generator</h2>
-A simple online tool for generating a tree of repositories
+A simple online tool for generating a tree from repositories or from local folders on your PC
 
 Link: https://klimsat.github.io/github-tree-generator/
 
