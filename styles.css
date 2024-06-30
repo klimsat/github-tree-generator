@@ -8,6 +8,12 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 label {
   display: block;
   margin-top: 10px;
@@ -42,6 +48,10 @@ button {
 }
 
 #copyBtn {
-  margin-top: 0px;
+  margin-top: 0;
   display: none; /* Скрываем кнопку по умолчанию */
+}
+
+.hits-counter {
+  margin-top: 0;
 }
