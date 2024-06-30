@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+#treeOutputContainer {
+  position: relative;
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  white-space: pre;
+  font-family: monospace;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#treeOutput {
+  flex-grow: 1;
+}
+
+#copyBtn {
+  margin-top: 0px;
+  display: none; /* Скрываем кнопку по умолчанию */
+}
