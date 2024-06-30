@@ -16,22 +16,18 @@
         </a>
       </div>
     </div>
-    <div>
-      <label>
-        Repository URL:
-        <input type="text" id="repoUrl" placeholder="https://github.com/user/repo">
-      </label>
+    <div class="input-group">
+      <label for="repoUrl">Repository URL:</label>
+      <input type="text" id="repoUrl" placeholder="https://github.com/user/repo">
     </div>
-    <div>
-      <label>
-        Branch (optional):
-        <input type="text" id="branch" placeholder="main">
-      </label>
+    <div class="input-group">
+      <label for="branch">Branch (optional):</label>
+      <input type="text" id="branch" placeholder="main">
     </div>
-    <button id="generateBtn">Generate Tree</button>
+    <button id="generateBtn" class="btn">Generate Tree</button>
     <div id="treeOutputContainer">
       <div id="treeOutput"></div>
-      <button id="copyBtn">Copy</button>
+      <button id="copyBtn" class="btn">Copy</button>
     </div>
   </div>
   <script src="app.js"></script>
